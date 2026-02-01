@@ -17,7 +17,7 @@ Create a `config.json` file in the project root directory with the following fie
 ## Execution Steps
 1. Open Parser: Navigate to and open `src/main/rascal/Parser.rsc`.
 2. Initialize Terminal: Click the "Import in new Rascal terminal" option located at the top of the editor window.
-3. Run Extraction: Once the terminal has loaded and the rascal> prompt appears, run the following command (replacing NameOfTheProject with your desired output name): `main(moduleName="NameOfTheProject");`
+3. Run Extraction: Once the terminal has loaded and the `rascal>` prompt appears, run the following command (replacing NameOfTheProject with your desired output name): `main(moduleName="NameOfTheProject");`
 
 ## Output
 The extractor processes the source code and generates architectural models in the `/models/composed` directory.
