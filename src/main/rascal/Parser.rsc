@@ -45,9 +45,13 @@ void main(str moduleName = "") {
     
     stdLibFiles = [];
     for (str path <- loadedConfig.externalLibRoot) {
-        loc libLoc = |file:///| + path;
-        println("Scanning external library in <libLoc>...");
-        stdLibFiles += findAllIncludeDirs(libLoc);
+        try {
+            loc libLoc = |file:///| + path;
+            println("Scanning external library in <libLoc>...");
+            stdLibFiles += findAllIncludeDirs(libLoc);
+        } catch e: {
+            println("[CRITICAL ERROR] Failed to parse <path>: <e>");
+        }
     }
 
     saveFilesAsJson = loadedConfig.saveFilesAsJson;
